@@ -1,0 +1,12 @@
+{
+  "games": [
+    "data/pmd-explorers-of-alpha.json",
+    "data/nova.json",
+    "data/infinity.json",
+    "data/odyssey.json",
+    "data/reborn.json",
+    "data/unbound.json",
+    "data/emerald-randomizer.json",
+    "data/infinite-fusion.json"
+  ]
+}

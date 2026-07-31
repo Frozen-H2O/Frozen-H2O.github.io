@@ -1,0 +1,26 @@
+{
+  "id": "nova",
+  "name": "Nova",
+  "link": "https://discord.gg/gNmjGNDST9",
+  "rating": {
+    "score": 3,
+    "label": "Pretty, but a slog to complete"
+  },
+  "completion": {
+    "main": 1784392763,
+    "dropped": false
+  },
+  "playtime_hours": 21,
+  "realtime_hours": 12.1,
+  "review": "The story is well written, complete with some amusing dialogue, and the art is well done.\n\nHowever, the gameplay is horrendous. It is pretty much Genshin AR grinding where you can not continue the story until you raise your rank by playing the boring parts of the game. The 'rank raising' gameplay is just catching tons of weak Pokémon (with requirements of specific types, such as 16 dark type, 16 fairy, and 16 fighting types) to unlock an area.\n\nAdditionally, as the built in speed up only works situationally, I had to use cheat engine speed up to run the game at 2.3x the whole time to make it bearable.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/d8c7ea6aa99c6fdb0e0ad3f2fbf8579a.jpg",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/e6dec651c4e53523d83e4966d805e188.jpg",
+    "background": "https://cdn2.steamgriddb.com/hero/e2321ee7c0698c322ab220c97483e94e.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/3a938dd4b7d1857c13b2e3f13a09aef0.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/a06dabc1eebd98e0cc4badfb4bc58565.ico",
+    "screenshots": [
+      "games/nova/Hall of Fame.png"
+    ]
+  }
+}

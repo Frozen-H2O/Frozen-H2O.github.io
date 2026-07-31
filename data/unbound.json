@@ -1,0 +1,28 @@
+{
+  "id": "unbound",
+  "name": "Unbound",
+  "link": "https://www.hackdex.app/hack/pokemon-unbound",
+  "rating": {
+    "score": 7,
+    "label": "Standard Pokémon Experience"
+  },
+  "completion": {
+    "main": 1782932400,
+    "dropped": false
+  },
+  "playtime_hours": 22.2,
+  "realtime_hours": 19.8,
+  "difficulty": "Difficult (Vanilla swap for Cosmog)",
+  "review": "Felt like a mainline Pokémon game in terms of story and (mostly) gameplay. Nothing super stellar, but was still fun to play through and is a good entry point into Pokémon fan games.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/8d4b3872a380f21cd87ef946965841d2.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/8a1fb022bcc98803214b76235033435d.png",
+    "background": "https://cdn2.steamgriddb.com/hero/c68b6e4b7ed9ea849ed0b85516d7f08c.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/592df05011dbe17b30b567033da30cb8.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/f492f3a961698dd6b676a4330541007d.png",
+    "screenshots": [
+      "games/unbound/Hall of Fame 1.png",
+      "games/unbound/Hall of Fame 2.png"
+    ]
+  }
+}

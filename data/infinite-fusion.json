@@ -1,0 +1,28 @@
+{
+  "id": "infinite-fusion",
+  "name": "Infinite Fusion",
+  "link": "https://discord.gg/infinitefusion",
+  "rating": {
+    "score": 9,
+    "label": "Uniquely fun"
+  },
+  "completion": {
+    "main": 1781982000,
+    "dropped": false
+  },
+  "playtime_hours": 26.7,
+  "realtime_hours": 28.5,
+  "difficulty": "Classic (Hard)",
+  "review": "Unique experience leaving me wanting to fuse every Pokémon just to see what they look like. Love the sprite selector to pick favorite look if the default did not suit me. Was hard carried by Slacking with Azumarill's Huge Power ability. Decent postgame.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/fea76020584c3d9da291dad659247914.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/9e240ae993fd0301a9d0c758ad3aacc6.png",
+    "background": "https://cdn2.steamgriddb.com/hero/954f815470e45af32e8e3916b122be48.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/1ed85a76f2ca9c257abfd26f584b7d74.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/faaebcdfe2773845e540b7981ee4a09b.png",
+    "screenshots": [
+      "games/infinite-fusion/Hall of Fame 1.png",
+      "games/infinite-fusion/Hall of Fame 2.png"
+    ]
+  }
+}

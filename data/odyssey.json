@@ -1,0 +1,29 @@
+{
+  "id": "odyssey",
+  "name": "Odyssey",
+  "link": "https://www.hackdex.app/hack/pokemon-odyssey",
+  "rating": {
+    "score": 10,
+    "label": "Favorite fan game"
+  },
+  "completion": {
+    "main": 1783617616,
+    "post_game": 1783655156,
+    "dropped": false
+  },
+  "playtime_hours": 99.8,
+  "realtime_hours": 27.0,
+  "difficulty": "Hard",
+  "review": "Best fangame I have ever played.\n\nBetter story and gameplay than any mainline Pokémon game on top of beautiful visuals and nice quality of life changes (love the EV setter).",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/febccfbffd0db5ad1e07171ceac87b50.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/366ffc95214e6c8eb4d62850ad6eb2c7.png",
+    "background": "https://cdn2.steamgriddb.com/hero/b28726656f217dec521d3df9f663028c.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/7e9d7bf9fca0d81a31df4f127d2e945d.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/c4756e09ab4ebb4e3220501908be71fa.png",
+    "screenshots": [
+      "games/odyssey/Labryinth Completed 1.png",
+      "games/odyssey/Labryinth Completed 2.png"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "reborn",
+  "name": "Reborn",
+  "link": "https://www.rebornevo.com/pr/index.html/",
+  "rating": {
+    "score": 1,
+    "label": "Horrible"
+  },
+  "completion": {
+    "main": 1783105200,
+    "dropped": true
+  },
+  "playtime_hours": 4.5,
+  "review": "Dropped after 2nd gym due to horribly cringy, edgy, and long-winded writing. Literally thousands of lines of neverendingtextthatgoesonandonallcrampedtogether that ruins any otherwise positive experience the game may offer.\n\nOn top of the bad writing, 2 out of the 3 characters you talk to the most at the start are deliberately written to be dislikable, further ruining the experience.\n\nDid not experience enough of the rom hack to comment on gameplay since I could not tolerate the writing enough to continue.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/714c1c7aa0aff87f3d649215ceb4d2d7.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/44cc1579162ed075110d316062ccf93f.png",
+    "background": "https://cdn2.steamgriddb.com/hero/143e5c9ad3a32acf21929ef4b9dcc782.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/39940c957cef1b6edaa87d33810e908a.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/f382edd9da37172d99db506ce5375bc3.png"
+  }
+}

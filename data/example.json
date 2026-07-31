@@ -1,0 +1,29 @@
+{
+  "id": "uncapitalized-name",
+  "name": "Full Name",
+  "link": "Link to download/discord of game",
+  "rating": {
+    "score": 0,
+    "label": "Short text summary of score"
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "Difficulty played",
+  "review": "Short or long review here.",
+  "images": {
+    "cover_vertical": "games/uncapitalized-name/cover-vertical.png",
+    "cover_horizontal": "games/uncapitalized-name/cover-horizontal.png",
+    "background": "games/uncapitalized-name/background.png",
+    "logo": "games/uncapitalized-name/logo.png",
+    "icon": "games/uncapitalized-name/icon.png",
+    "screenshots": [
+      "games/uncapitalized-name/screenshot-1.png",
+      "games/uncapitalized-name/screenshot-2.png"
+    ]
+  }
+}

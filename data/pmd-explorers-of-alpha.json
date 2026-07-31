@@ -1,0 +1,27 @@
+{
+  "id": "pmd-explorers-of-alpha",
+  "name": "Mystery Dungeon: Explorers of Alpha",
+  "link": "https://projectpokemon.org/home/forums/topic/58480-pokemon-mystery-dungeon-explorers-of-alpha-303-last-update-3102025/",
+  "rating": {
+    "score": 1,
+    "label": "Worse than the base game"
+  },
+  "completion": {
+    "main": 1785374140,
+    "dropped": false
+  },
+  "playtime_hours": 23.2,
+  "realtime_hours": 23.2,
+  "difficulty": "Vanilla",
+  "review": "This is supposed to be a quality of life + difficulty hack, but it ends up being far worse than the original game...\n\nIt has questionable changes including but not limited to:\n- Limited max party size in a way that custom starters could be unable to complete the game (without any warning whatsoever when picking starters). For example, if you pick a Shiny Jirachi starter, as it is for some ridiculous reason a size 6 legendary, you cannot fit Shaymin onto your party at Sky Peak. If you made your starters both legendary Pokemon like Groudon and Rayquaza, you wouldn't be able to do the Dusknoir fight since Grovyle wouldn't fit on the team. And again, it lets you pick these starters without so much as a warning of \"hey, it's impossible to complete the game with a party this size because this is a poorly coded ROM hack\"\n- \"Dark\" Dialga re-translation for some reason instead of the official Primal Dialga, despite pretty much no other changes to the story?\n- Randomly adds turn limits to boss fights even on vanilla difficulty that fully ruin immersion by resetting the boss music too. The first 3 turns of the climactic final fight is just the music resetting every turn...\n\nIf you want custom starters, save yourself the headache and just use Sky Temple to add your starter to the vanilla ROM instead of dealing with this trash hack.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/d12e95d7c7cd7695807ffb18b926cf0a.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/5fbecd39738b884e15f93f400108a5c1.png",
+    "background": "https://cdn2.steamgriddb.com/hero/056446c048976342c15d7078d18fba05.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/e8d036f32201b9c2cece35c67d14290c.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/bf1e0cc00235a3dc0e32b4ee74ef7efb.png",
+    "screenshots": [
+      "games/pmd-explorers-of-alpha/Main Story Save.png"
+    ]
+  }
+}

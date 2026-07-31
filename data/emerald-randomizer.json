@@ -1,0 +1,25 @@
+{
+  "id": "emerald-randomizer",
+  "name": "Emerald Archipelago Randomizer",
+  "link": "https://archipelago.gg/games/Pokemon%20Emerald/info/en",
+  "rating": {
+    "score": 5,
+    "label": "Average"
+  },
+  "completion": {
+    "main": 1782327600,
+    "dropped": false
+  },
+  "playtime_hours": 23.1,
+  "review": "Played as part of an Archipelago randomizer with friends. Standard Pokémon randomizer experience: it was fun but nothing special.",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/052938e7b425df3acdd9dc4be44404ef.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/269479acf1c5a7757c6c7efd02b2c916.png",
+    "background": "https://cdn2.steamgriddb.com/hero/1006ff12c465532f8c574aeaa4461b16.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/69ec5030f78a9b735402d133317bf5f6.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/d0095d3cd2f747ab23126a366739afb5.png",
+    "screenshots": [
+      "games/emerald-randomizer/Hall of Fame.png"
+    ]
+  }
+}

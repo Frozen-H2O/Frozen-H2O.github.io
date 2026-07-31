@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A personal archive of Pokémon ROM hacks and fan game ratings." />
+        <title>Pokémon Letterboxd</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main id="top">
+            <section class="hero">
+                <a href="https://steamcommunity.com/id/Frozen_H2O/"><img class="brand-mark" src="https://avatars.akamai.steamstatic.com/14cd2844c3f3c54f46b7cabb23a4f1bfc7c84e24_full.jpg" alt="Site Owner Avatar"></a>
+                <p class="eyebrow">Pokémon ROM hacks &amp; fan games</p>
+                <h1><em>Pokémon</em> Letterboxd</h1>
+                <div class="stats" id="stats" aria-label="Collection statistics"></div>
+            </section>
+
+            <section class="collection" aria-labelledby="collection-heading">
+                <div class="collection-topline">
+                    <h2 id="collection-heading">Played games <span id="game-count"></span></h2>
+                    <label class="sort-control">Sort by
+                        <select id="sort" aria-label="Sort games">
+                            <option value="recent">Recently played</option>
+                            <option value="rating-desc">Highest rated</option>
+                            <option value="rating-asc">Lowest rated</option>
+                            <option value="playtime-desc">Most played</option>
+                            <option value="playtime-asc">Least played</option>
+                            <option value="alphabetical">A–Z</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="game-grid" id="game-grid" aria-live="polite"></div>
+                <div class="empty-state" id="empty-state" hidden>
+                    <p>Something went wrong and no games could be found.</p>
+                    <span>Make sure that <code>data/games.json</code> is readable with correct json paths.</span>
+                </div>
+            </section>
+        </main>
+
+        <dialog id="game-dialog" class="game-dialog" aria-labelledby="dialog-title">
+            <button class="close-dialog" id="close-dialog" aria-label="Close game details">×</button>
+            <article id="dialog-content"></article>
+        </dialog>
+        <script src="app.js"></script>
+    </body>
+</html>
