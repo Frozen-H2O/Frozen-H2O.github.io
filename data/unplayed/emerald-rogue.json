@@ -1,0 +1,26 @@
+{
+  "id": "emerald-rogue",
+  "name": "Emerald Rogue",
+  "link": "https://www.hackdex.app/hack/emerald-rogue",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/823344446ad6cab48790cf8ef3cbf9ee.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/f7c08b3a8bd6857210edf6f742d72679.png",
+    "background": "https://cdn2.steamgriddb.com/hero/a095ff41bc0f3c4cf580c551788551d0.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/6887ca2d8d0700438c618109c196455f.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/07246f1add4748b2c3c031e2ec9262e0.png",
+    "screenshots": []
+  }
+}

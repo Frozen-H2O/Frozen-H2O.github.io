@@ -1,0 +1,26 @@
+{
+  "id": "bizarre",
+  "name": "Bizarre",
+  "link": "https://blog.pokeliberty.net/2018/12/pokemon-bizarre.html",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/d1a46e22b96f9abac620f9e61735dd94.png",
+    "cover_horizontal": "",
+    "background": "",
+    "logo": "https://cdn2.steamgriddb.com/logo/382125cce2e69e5d8f9640b52fdf9df4.png",
+    "icon": "",
+    "screenshots": []
+  }
+}

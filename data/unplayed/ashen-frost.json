@@ -1,0 +1,26 @@
+{
+  "id": "ashen-frost",
+  "name": "Ashen Frost",
+  "link": "https://eeveeexpo.com/ashen-frost/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0.5,
+  "realtime_hours": 0.5,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/557cd3b7cd97fd0189ea3dc3019b9f7c.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/00a1abf4c4bd78a254176b6f91d10972.png",
+    "background": "https://cdn2.steamgriddb.com/hero/c8d11d995975fc69b9ca72711eb01817.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/2f6eac5c2731d950c3c3b073490f7a69.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/1fc4d406fb18e3ef7e4174fbddd7a462.png",
+    "screenshots": []
+  }
+}

@@ -20,6 +20,9 @@
 * {
     box-sizing: border-box;
 }
+.hidden {
+    visibility: hidden;
+}
 html {
     scroll-behavior: smooth;
     background-color: #1d1d1d;
@@ -105,6 +108,31 @@ h1 em {
     align-items: center;
     margin-bottom: 25px;
 }
+.collection-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.view-toggle {
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--background-noise);
+}
+.view-toggle-button {
+    border: 0;
+    border-radius: 5px;
+    padding: 6px 11px;
+    color: var(--text-muted);
+    background: transparent;
+    font: 500 0.78rem 'DM Mono', monospace;
+    cursor: pointer;
+}
+.view-toggle-button.is-active {
+    color: var(--text-secondary);
+    background: var(--gold);
+}
 h2 {
     margin: 0;
     font-size: 1.25rem;
@@ -112,11 +140,11 @@ h2 {
 }
 h2 span {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin-left: 5px;
 }
-.sort-control {
+.sort-control:not([hidden]) {
     color: var(--text-muted);
     font-size: 0.84rem;
     display: flex;
@@ -153,12 +181,10 @@ select {
     box-shadow: 0 1px 1px rgba(20,30,50,.02);
     transition: transform 0.25s ease,box-shadow 0.25s ease;
     color: var(--text-primary);
+    text-decoration: none;
 }
-.game-card:focus-visible,
-.game-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-    outline: none;
+.game-card-unavailable {
+    cursor: default;
 }
 .card-art {
     position: absolute;
@@ -268,6 +294,17 @@ select {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #94bfeb;
+    color: var(--text-secondary);
+    text-shadow: 1px 0 0 var(--text-secondary-outline), 0 -1px 0 var(--text-secondary-outline), 0 1px 0 var(--text-secondary-outline), -1px 0 0 var(--text-secondary-outline);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 125px;
+    font-size: 30px;
 }
 .dialog-hero::after {
     content: '';
@@ -407,9 +444,12 @@ select {
         align-items: flex-start;
         flex-direction: column;
     }
-    .sort-control {
+    .collection-type {
         width: 100%;
         justify-content: space-between;
+    }
+    .sort-control {
+        justify-content: flex-end;
     }
     .sort-control select {
         flex: 1;

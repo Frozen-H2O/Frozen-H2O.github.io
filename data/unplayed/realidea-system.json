@@ -1,0 +1,26 @@
+{
+  "id": "realidea-system",
+  "name": "Realidea System",
+  "link": "https://discord.gg/gNmjGNDST9",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/53d1a316182363e7999295f88c41acaa.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/098a12bb8aaf171485d5e3af8cf5bd0f.png",
+    "background": "https://cdn2.steamgriddb.com/hero/155a354e393ed4abe3f9695bb7eb5fe4.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/7b3cb4472d233eceefe071eaca5ae664.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/a957d549188f92f2df87a4fb067a52e4.png",
+    "screenshots": []
+  }
+}

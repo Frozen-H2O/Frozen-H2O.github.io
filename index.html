@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
         <main id="top">
@@ -21,8 +22,15 @@
 
             <section class="collection" aria-labelledby="collection-heading">
                 <div class="collection-topline">
-                    <h2 id="collection-heading">Played games <span id="game-count"></span></h2>
-                    <label class="sort-control">Sort by
+                    <div class="collection-type">
+                        <div class="view-toggle" role="tablist" aria-label="Game list">
+                            <button class="view-toggle-button is-active" type="button" role="tab" aria-selected="true" data-view="played">Played</button>
+                            <button class="view-toggle-button" type="button" role="tab" aria-selected="false" data-view="backlog">Backlog</button>
+                        </div>
+                        <h2 id="collection-heading"><span id="game-count">0 games</span></h2>
+                    </div>
+                     
+                    <label class="sort-control" id="sort-control">Sort by
                         <select id="sort" aria-label="Sort games">
                             <option value="recent">Recently played</option>
                             <option value="rating-desc">Highest rated</option>
@@ -36,7 +44,7 @@
                 <div class="game-grid" id="game-grid" aria-live="polite"></div>
                 <div class="empty-state" id="empty-state" hidden>
                     <p>Something went wrong and no games could be found.</p>
-                    <span>Make sure that <code>data/games.json</code> is readable with correct json paths.</span>
+                    <span>Make sure that <code>data/games.json</code> and <code>data/backlog.json</code> are readable with correct json paths.</span>
                 </div>
             </section>
         </main>

@@ -1,0 +1,26 @@
+{
+  "id": "flora-sky",
+  "name": "Flora Sky",
+  "link": "https://www.emulatorhacks.com/2021/03/pokemon-flora-sky-gba-pokemon-emerald.html",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/9fd10209068682aa7a4922308b10b03b.jpg",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/d9ec6e4aa1184165e724e789500080fe.png",
+    "background": "https://cdn2.steamgriddb.com/hero/86e1b797dc3cd603d6ae96f6812ca3bf.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/c2f36d2c5b0275f02b88264fe029e9ca.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/7517c624e419f83a42cb371d47b1e18f.png",
+    "screenshots": []
+  }
+}

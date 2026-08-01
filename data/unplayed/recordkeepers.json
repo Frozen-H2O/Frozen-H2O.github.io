@@ -1,0 +1,26 @@
+{
+  "id": "recordkeepers",
+  "name": "Recordkeepers",
+  "link": "https://www.hackdex.app/hack/recordkeepers",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/01f219778c343836508a20d625d47980.png",
+    "cover_horizontal": "https://images.hackdex.app/recordkeepers/1765791842008-0.png",
+    "background": "",
+    "logo": "https://cdn2.steamgriddb.com/logo/b0b44cf6c5ee809d5c2a77c40a314a8b.png",
+    "icon": "",
+    "screenshots": []
+  }
+}

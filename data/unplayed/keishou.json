@@ -1,0 +1,26 @@
+{
+  "id": "keishou",
+  "name": "Keishou",
+  "link": "https://eeveeexpo.com/threads/7477/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/6b982b990f93639545627b652c3d57c1.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/1e106c93152be33ff4cc328157b74a98.png",
+    "background": "https://cdn2.steamgriddb.com/hero/f5fc58af52ee6876cce5222342de1317.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/9ff2dbad7fe87d9c60606e0297cf122b.png",
+    "icon": "",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "valiant",
+  "name": "Valiant",
+  "link": "https://www.hackdex.app/hack/pokemon-valiant",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://images.hackdex.app/pokemon-valiant/1771863343024-0.png",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}

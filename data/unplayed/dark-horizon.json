@@ -1,0 +1,26 @@
+{
+  "id": "dark-horizon",
+  "name": "Dark Horizon",
+  "link": "https://eeveeexpo.com/threads/9332/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://i.imgur.com/b7wHJ64.gif",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}

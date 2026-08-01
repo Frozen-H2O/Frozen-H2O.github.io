@@ -1,25 +1,40 @@
-const manifestPath = 'data/games.json';
+const playedManifestPath = 'data/games.json';
+const backlogManifestPath = 'data/backlog.json';
 let games = [];
+let backlogGames = [];
+let activeView = 'played';
 
 const formatDate = (timestamp) => timestamp ? new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', day: 'numeric' }).format(new Date(timestamp * 1000)) : 'Dropped';
 const formatHours = (hours) => `${Number(hours).toFixed(Number(hours) % 1 ? 1 : 0)} hours`;
 const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char]);
 
+async function loadCollection(manifestPath) {
+    const manifest = await fetch(manifestPath).then(response => {
+        if (!response.ok)
+            throw new Error(`Could not load ${manifestPath}`);
+        return response.json();
+    });
+    return Promise.all(manifest.games.map(path => fetch(path).then(response => {
+        if (!response.ok)
+            throw new Error(`Could not load ${path}`);
+        return response.json();
+    })));
+}
+
 async function loadGames() {
-    try {
-        const manifest = await fetch(manifestPath).then(response => {
-            if (!response.ok)
-                throw new Error('Could not load game manifest');
-            return response.json();
-        });
-        games = await Promise.all(manifest.games.map(path => fetch(path).then(response => response.json())));
-    } catch (error) {
-        console.error(error);
-        games = [];
-    }
+    const [playedResult, backlogResult] = await Promise.allSettled([
+        loadCollection(playedManifestPath),
+        loadCollection(backlogManifestPath)
+    ]);
+    games = playedResult.status === 'fulfilled' ? playedResult.value : [];
+    backlogGames = backlogResult.status === 'fulfilled' ? backlogResult.value : [];
+    if (playedResult.status === 'rejected' || backlogResult.status === 'rejected')
+        console.error('One or more game lists could not be loaded.', playedResult.reason, backlogResult.reason);
+
+    activeView = new URLSearchParams(window.location.search).get('view') === 'backlog' ? 'backlog' : 'played';
     render();
     const requestedGame = new URLSearchParams(window.location.search).get('game');
-    if (requestedGame)
+    if (requestedGame && activeView === 'played')
         openGame(requestedGame, { updateURL: false });
 }
 
@@ -32,43 +47,75 @@ function sortGames(list, method) {
         if (method === 'alphabetical')
             return a.name.localeCompare(b.name);
         if (method === 'rating-desc')
-            return b.rating.score - a.rating.score;
+            return Number(b.rating?.score || 0) - Number(a.rating?.score || 0);
         if (method === 'rating-asc')
-            return a.rating.score - b.rating.score;
+            return Number(a.rating?.score || 0) - Number(b.rating?.score || 0);
         if (method === 'playtime-desc')
-            return b.playtime_hours - a.playtime_hours;
+            return Number(b.playtime_hours || 0) - Number(a.playtime_hours || 0);
         if (method === 'playtime-asc')
-            return a.playtime_hours - b.playtime_hours;
+            return Number(a.playtime_hours || 0) - Number(b.playtime_hours || 0);
         return completion(b) - completion(a);
     });
 }
 
-function cardTemplate(game) {
+function sortBacklogGames(list) {
+    return [...list].sort((a, b) => {
+        const aStarted = Number(a.playtime_hours || 0) > 0 || Number(a.rating?.score || 0) > 0;
+        const bStarted = Number(b.playtime_hours || 0) > 0 || Number(b.rating?.score || 0) > 0;
+        return Number(bStarted) - Number(aStarted) || a.name.localeCompare(b.name);
+    });
+}
+
+function ratingMarkup(score) {
+    if (score <= 0 || score > 10)
+        return '';
+    const color = score < 4 ? 'bad' : score < 7 ? 'decent' : score < 10 ? 'good' : 'gold';
+    return `<span class="score" style="background-color: var(--${color}-game-background)">${score}/10</span>`;
+}
+
+function cardTemplate(game, isBacklog = false) {
     const image = game.images?.cover_vertical || game.images?.cover_horizontal || game.images?.background || '';
-    return `<button class="game-card" data-id="${escapeHTML(game.id)}" aria-label="Open Pokémon ${escapeHTML(game.name)} review">
+    const score = Number(game.rating?.score || 0);
+    const playtime = Number(game.playtime_hours || 0);
+    const showScore = score > 0 && score <= 10;
+    const showPlaytime = playtime > 0;
+    const meta = showPlaytime ? `<p class="card-meta"><span>${formatHours(playtime)}</span></p>` : '';
+    const content = `
         <div class="card-art">
-            ${image ? `<img src="${escapeHTML(image)}" alt="" />` : ''}
+            ${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(game.name)} coverart" />` : `<div class='placeholder'>${escapeHTML(game.name)}</div>`}
             <div class="art-shade"></div>
-            <span class="score" style="background-color: var(--${(game.rating.score < 4) ? 'bad' : (game.rating.score < 7) ? 'decent' : (game.rating.score < 10) ? 'good' : 'gold'}-game-background)">${game.rating.score}/10</span>
+            ${showScore ? ratingMarkup(score) : ''}
         </div>
-        <div class="card-body">
-            <p class="card-meta">
-                <span>${formatHours(game.playtime_hours)}</span>
-            </p>
-        </div>
-    </button>`;
+        <div class="card-body">${meta}</div>`;
+
+    if (isBacklog) {
+        return game.link
+            ? `<a class="game-card" target="_blank" href="${escapeHTML(game.link)}" aria-label="Open Pokémon ${escapeHTML(game.name)}">${content}</a>`
+            : `<div class="game-card game-card-unavailable" aria-label="Pokémon ${escapeHTML(game.name)} has no game page link">${content}</div>`;
+    }
+    return `<button class="game-card" data-id="${escapeHTML(game.id)}" aria-label="Open Pokémon ${escapeHTML(game.name)} review">${content}</button>`;
 }
 
 function render() {
+    const isBacklog = activeView === 'backlog';
+    const list = isBacklog ? backlogGames : games;
+    const ordered = isBacklog ? sortBacklogGames(list) : sortGames(list, document.querySelector('#sort').value);
     const grid = document.querySelector('#game-grid');
-    const ordered = sortGames(games, document.querySelector('#sort').value);
-    grid.innerHTML = ordered.map(cardTemplate).join('');
-    document.querySelector('#game-count').textContent = `(${games.length})`;
-    document.querySelector('#empty-state').hidden = games.length > 0;
+    grid.innerHTML = ordered.map(game => cardTemplate(game, isBacklog)).join('');
+    document.querySelector('#game-count').textContent = isBacklog ? `${list.length} game${list.length == 1 ? '' : 's'}` : '';
+    document.querySelector('#sort-control').hidden = isBacklog;
+    document.querySelector('#empty-state').hidden = list.length > 0;
+
+    document.querySelectorAll('.view-toggle-button').forEach(button => {
+        const selected = button.dataset.view === activeView;
+        button.classList.toggle('is-active', selected);
+        button.setAttribute('aria-selected', String(selected));
+    });
+    grid.querySelectorAll('button.game-card').forEach(card => card.addEventListener('click', () => openGame(card.dataset.id)));
+
     const totalHours = games.reduce((sum, game) => sum + Number(game.playtime_hours || 0), 0);
-    const average = games.length ? (games.reduce((sum, game) => sum + Number(game.rating.score || 0), 0) / games.length).toFixed(1) : '—';
+    const average = games.length ? (games.reduce((sum, game) => sum + Number(game.rating?.score || 0), 0) / games.length).toFixed(1) : '—';
     document.querySelector('#stats').innerHTML = `<div class="stat"><strong>${games.length}</strong><span>games played</span></div><div class="stat"><strong>${totalHours.toFixed(1)}h</strong><span>total playtime</span></div><div class="stat"><strong>${average}</strong><span>average rating</span></div>`;
-    grid.querySelectorAll('.game-card').forEach(card => card.addEventListener('click', () => openGame(card.dataset.id)));
 }
 
 function reviewHTML(review) {
@@ -81,49 +128,27 @@ function openGame(id, { updateURL = true } = {}) {
         return;
     const hero = game.images?.background || game.images?.cover_horizontal || game.images?.cover_vertical || '';
     const screenshots = (game.images?.screenshots || []).map((src, index) => `<div class="screenshot-frame"><img src="${escapeHTML(src)}" alt="Pokémon ${escapeHTML(game.name)} screenshot ${index + 1}" loading="lazy" /></div>`).join('');
-    const postGame = game.completion?.post_game ? `<div><dt>Post-game</dt><dd>${formatDate(game.completion.post_game)}</dd></div>` : '';
     document.querySelector('#dialog-content').innerHTML = `
-    
         ${game.link ? `<a href="${escapeHTML(game.link)}" target="_blank">` : ''}
             <div class="dialog-hero">
-                ${hero ? `<img src="${escapeHTML(hero)}" alt="Game Background Image" />` : ''}
+                ${hero ? `<img src="${escapeHTML(hero)}" alt="Game background image" />` : ''}
                 <div class="dialog-title">
-                        ${game.images?.logo ? `<img src="${escapeHTML(game.images.logo)}" alt="Game logo" />` : `<h2>Pokémon ${escapeHTML(game.name)}</h2>`}
+                    ${game.images?.logo ? `<img src="${escapeHTML(game.images.logo)}" alt="Pokémon ${escapeHTML(game.name)}" />` : `<h2>Pokémon ${escapeHTML(game.name)}</h2>`}
                 </div>
             </div>
         ${game.link ? '</a>' : ''}
         <div class="dialog-main">
             <div class="dialog-rating">
-                <div class="rating-number">
-                    ${game.rating.score}<span>/</span><small>10</small>
-                </div>
-                <div class="rating-label">
-                    ${game.rating.label ? escapeHTML('- ' + game.rating.label) : ''}
-                </div>
+                <div class="rating-number">${Number(game.rating?.score || 0)}<span>/</span><small>10</small></div>
+                <div class="rating-label">${game.rating?.label ? escapeHTML('- ' + game.rating.label) : ''}</div>
             </div>
             <dl class="detail-list">
-                <div>
-                    <dt>Playtime</dt>
-                    <dd>${formatHours(game.playtime_hours)}</dd>
-                </div>
-                <div>
-                    <dt>Difficulty</dt>
-                    <dd>${game.difficulty ? escapeHTML(game.difficulty) : 'Default'}</dd>
-                </div>
-                <div>
-                    <dt>${game.completion?.dropped ? 'Dropped' : 'Completed'}</dt>
-                    <dd>${formatDate(completion(game))}</dd>
-                </div>
+                <div><dt>Playtime</dt><dd>${formatHours(game.playtime_hours || 0)}</dd></div>
+                <div><dt>Difficulty</dt><dd>${game.difficulty ? escapeHTML(game.difficulty) : 'Default'}</dd></div>
+                <div><dt>${game.completion?.dropped ? 'Dropped' : 'Completed'}</dt><dd>${formatDate(completion(game))}</dd></div>
             </dl>
-            <section class="review">
-                <h3>Review</h3>
-                ${reviewHTML(game.review)}
-            </section>
-            ${screenshots ?
-                `<section class="screenshots">
-                    <h3>Gallery</h3>
-                    <div class="screenshot-row">${screenshots}</div>
-                </section>` : ''}
+            <section class="review"><h3>Review</h3>${reviewHTML(game.review)}</section>
+            ${screenshots ? `<section class="screenshots"><h3>Gallery</h3><div class="screenshot-row">${screenshots}</div></section>` : ''}
         </div>`;
     const dialog = document.querySelector('#game-dialog');
     if (!dialog.open)
@@ -141,7 +166,21 @@ function setGameParameter(id) {
     window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
 }
 
+function setViewParameter(view) {
+    const url = new URL(window.location.href);
+    if (view === 'backlog')
+        url.searchParams.set('view', 'backlog');
+    else
+        url.searchParams.delete('view');
+    window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+}
+
 document.querySelector('#sort').addEventListener('change', render);
+document.querySelectorAll('.view-toggle-button').forEach(button => button.addEventListener('click', () => {
+    activeView = button.dataset.view;
+    setViewParameter(activeView);
+    render();
+}));
 document.querySelector('#close-dialog').addEventListener('click', () => document.querySelector('#game-dialog').close());
 document.querySelector('#game-dialog').addEventListener('click', event => {
     if (event.target.id === 'game-dialog')

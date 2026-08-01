@@ -1,0 +1,26 @@
+{
+  "id": "gaia",
+  "name": "Gaia",
+  "link": "https://www.hackdex.app/hack/pokemon-gaia",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/2bc5b5eabebba63e6b52212f661749eb.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/35cf5a6a093a67322ea81efd78687216.png",
+    "background": "https://cdn2.steamgriddb.com/hero/f8e1af40f964a96fe14cc921fd596823.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/7833d176ad6f6dde5efc95848e6f47a8.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/8dc2521a115a3f54b5fbba604c679590.png",
+    "screenshots": []
+  }
+}

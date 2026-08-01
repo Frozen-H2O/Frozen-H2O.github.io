@@ -1,0 +1,26 @@
+{
+  "id": "xenoverse",
+  "name": "Xenoverse",
+  "link": "https://eeveeexpo.com/xenoverse/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/d728b79dad660ff562a0175b2bcc23c9.jpg",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/56be0aac3119df17b6ba47cc9e4bdf9b.png",
+    "background": "https://cdn2.steamgriddb.com/hero/06dc4cbadaa1bc049b80c30e1721469b.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/4dffc841f2fde7388103924e62726dc6.png",
+    "icon": "",
+    "screenshots": []
+  }
+}

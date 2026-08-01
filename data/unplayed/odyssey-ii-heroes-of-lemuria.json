@@ -1,0 +1,26 @@
+{
+  "id": "odyssey-ii-heroes-of-lemuria",
+  "name": "Odyssey II: Heroes of Lemuria",
+  "link": "https://www.hackdex.app/hack/pokemon-odyssey-ii-heroes-of-lemuria",
+  "rating": {
+    "score": 0,
+    "label": "https://www.hackdex.app/hack/pokemon-odyssey-ii-heroes-of-lemuria"
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://images.hackdex.app/pokemon-odyssey-ii-heroes-of-lemuria/1783085321456-0.png",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}
