@@ -60,9 +60,11 @@ function sortGames(list, method) {
 
 function sortBacklogGames(list) {
     return [...list].sort((a, b) => {
-        const aStarted = Number(a.playtime_hours || 0) > 0 || Number(a.rating?.score || 0) > 0;
-        const bStarted = Number(b.playtime_hours || 0) > 0 || Number(b.rating?.score || 0) > 0;
-        return Number(bStarted) - Number(aStarted) || a.name.localeCompare(b.name);
+        if (Number(a.playtime_hours || 0) > 0 || Number(b.playtime_hours || 0) > 0)
+            return Number(b.playtime_hours || 0) - Number(a.playtime_hours || 0);
+        const aRated = Number(a.rating?.score || 0) > 0;
+        const bRated = Number(b.rating?.score || 0) > 0;
+        return Number(bRated) - Number(aRated) || a.name.localeCompare(b.name);
     });
 }
 
