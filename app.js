@@ -14,11 +14,18 @@ async function loadCollection(manifestPath) {
             throw new Error(`Could not load ${manifestPath}`);
         return response.json();
     });
-    return Promise.all(manifest.games.map(path => fetch(path).then(response => {
-        if (!response.ok)
-            throw new Error(`Could not load ${path}`);
-        return response.json();
-    })));
+    const loadedGames = await Promise.all(manifest.games.map(async path => {
+        try {
+            const response = await fetch(path);
+            if (!response.ok)
+                throw new Error(`Request returned ${response.status}`);
+            return await response.json();
+        } catch (error) {
+            console.error(`Could not load game file: ${path}`, error);
+            return null;
+        }
+    }));
+    return loadedGames.filter(Boolean);
 }
 
 async function loadGames() {
