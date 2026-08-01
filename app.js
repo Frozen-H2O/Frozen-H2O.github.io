@@ -122,6 +122,22 @@ function reviewHTML(review) {
     return escapeHTML(review || 'No review written yet.').split(/\n\s*\n/).map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`).join('');
 }
 
+function updateDialogScrollCues() {
+    const dialog = document.querySelector('#game-dialog');
+    if (!dialog.open)
+        return;
+    const remainingScroll = dialog.scrollHeight - dialog.clientHeight - dialog.scrollTop;
+    const hasOverflow = dialog.scrollHeight > dialog.clientHeight + 2;
+    dialog.classList.toggle('has-hidden-above', hasOverflow && dialog.scrollTop > 2);
+    dialog.classList.toggle('has-hidden-below', hasOverflow && remainingScroll > 2);
+
+    const bounds = dialog.getBoundingClientRect();
+    dialog.style.setProperty('--dialog-left', `${bounds.left}px`);
+    dialog.style.setProperty('--dialog-width', `${bounds.width}px`);
+    dialog.style.setProperty('--dialog-top', `${bounds.top}px`);
+    dialog.style.setProperty('--dialog-bottom', `${bounds.bottom}px`);
+}
+
 function openGame(id, { updateURL = true } = {}) {
     const game = games.find(item => item.id === id);
     if (!game)
@@ -153,6 +169,9 @@ function openGame(id, { updateURL = true } = {}) {
     const dialog = document.querySelector('#game-dialog');
     if (!dialog.open)
         dialog.showModal();
+    dialog.scrollTop = 0;
+    requestAnimationFrame(updateDialogScrollCues);
+    dialog.querySelectorAll('img').forEach(image => image.addEventListener('load', updateDialogScrollCues, { once: true }));
     if (updateURL)
         setGameParameter(id);
 }
@@ -186,6 +205,8 @@ document.querySelector('#game-dialog').addEventListener('click', event => {
     if (event.target.id === 'game-dialog')
         event.currentTarget.close();
 });
+document.querySelector('#game-dialog').addEventListener('scroll', updateDialogScrollCues, { passive: true });
+window.addEventListener('resize', updateDialogScrollCues);
 document.querySelector('#game-dialog').addEventListener('close', () => {
     if (new URLSearchParams(window.location.search).has('game'))
         setGameParameter(null);
