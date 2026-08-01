@@ -11,8 +11,8 @@
     "post_game": 1000000000,
     "dropped": false
   },
-  "playtime_hours": 0,
-  "realtime_hours": 0,
+  "playtime_hours": 0.3,
+  "realtime_hours": 0.3,
   "difficulty": "",
   "review": "",
   "images": {
