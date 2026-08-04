@@ -1,7 +1,7 @@
 {
-  "id": "",
-  "name": "",
-  "link": "",
+  "id": "solar-eclipse",
+  "name": "Solar Eclipse",
+  "link": "https://eeveeexpo.com/threads/9048/",
   "rating": {
     "score": 0,
     "label": ""
@@ -16,8 +16,8 @@
   "difficulty": "",
   "review": "",
   "images": {
-    "cover_vertical": "",
-    "cover_horizontal": "",
+    "cover_vertical": "https://images.igdb.com/igdb/image/upload/t_1080p/coc8ux.jpg",
+    "cover_horizontal": "https://i.postimg.cc/SNPkm3h7/undefined-Imgur.gif",
     "background": "",
     "logo": "",
     "icon": "",

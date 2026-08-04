@@ -1,5 +1,4 @@
-const playedManifestPath = 'data/games.json';
-const backlogManifestPath = 'data/backlog.json';
+const manifestPath = 'data/games.json';
 let games = [];
 let backlogGames = [];
 let activeView = 'played';
@@ -29,14 +28,15 @@ async function loadCollection(manifestPath) {
 }
 
 async function loadGames() {
-    const [playedResult, backlogResult] = await Promise.allSettled([
-        loadCollection(playedManifestPath),
-        loadCollection(backlogManifestPath)
-    ]);
-    games = playedResult.status === 'fulfilled' ? playedResult.value : [];
-    backlogGames = backlogResult.status === 'fulfilled' ? backlogResult.value : [];
-    if (playedResult.status === 'rejected' || backlogResult.status === 'rejected')
-        console.error('One or more game lists could not be loaded.', playedResult.reason, backlogResult.reason);
+    try {
+        const allGames = await loadCollection(manifestPath);
+        games = allGames.filter(game => Boolean(game.completion?.main));
+        backlogGames = allGames.filter(game => !game.completion?.main);
+    } catch (error) {
+        console.error(`Could not load ${manifestPath}`, error);
+        games = [];
+        backlogGames = [];
+    }
 
     activeView = new URLSearchParams(window.location.search).get('view') === 'backlog' ? 'backlog' : 'played';
     render();

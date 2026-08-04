@@ -1,7 +1,7 @@
 {
-  "id": "",
-  "name": "",
-  "link": "",
+  "id": "valiant",
+  "name": "Valiant",
+  "link": "https://www.hackdex.app/hack/pokemon-valiant",
   "rating": {
     "score": 0,
     "label": ""
@@ -17,7 +17,7 @@
   "review": "",
   "images": {
     "cover_vertical": "",
-    "cover_horizontal": "",
+    "cover_horizontal": "https://images.hackdex.app/pokemon-valiant/1771863343024-0.png",
     "background": "",
     "logo": "",
     "icon": "",

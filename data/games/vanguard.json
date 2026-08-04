@@ -1,0 +1,26 @@
+{
+  "id": "vanguard",
+  "name": "Vanguard",
+  "link": "https://eeveeexpo.com/vanguard/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/ec58257cb1cfa4ee7b27a9fe48eb34c7.jpg",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/2ac9c4f03abfb59a129b08696cb5e2cb.png",
+    "background": "https://cdn2.steamgriddb.com/hero/5149c48e0770eacbe92ea9727760e640.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/8c1046f2c3fd896213c9e9d7d754c15d.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/413da71d711b7d49f8c5f6bbc2266a62.ico",
+    "screenshots": []
+  }
+}

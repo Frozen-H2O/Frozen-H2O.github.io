@@ -1,0 +1,26 @@
+{
+  "id": "amethyst",
+  "name": "Amethyst",
+  "link": "https://www.hackdex.app/hack/pokemon-amethyst",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/28822581011ba5cfbd48279952ffd6b5.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/785213e6db247bfea76172f8d6164853.png",
+    "background": "https://cdn2.steamgriddb.com/hero/a51653e0ab93c9a1d6e571f1cb8e43fe.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/3ec6722473f3eead6c6def4c0db34ddd.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/bad8d5e3ca1a46379525b3a9f442074c.png",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "radical-red",
+  "name": "Radical Red",
+  "link": "https://www.hackdex.app/hack/radical-red",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 2.1,
+  "realtime_hours": 2.1,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/651fd610eb7c127c615f067dcda0c16c.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/a1180518695bab7f32aed703fe2a1b0a.png",
+    "background": "https://cdn2.steamgriddb.com/hero/024b2cf9b641eee04adfdd65b47bc2dc.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/89c30ca363566155b1dec2102063c957.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/725e86549d14fa0bbace3d72c56dbe92.png",
+    "screenshots": []
+  }
+}

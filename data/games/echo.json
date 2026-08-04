@@ -1,0 +1,26 @@
+{
+  "id": "echo",
+  "name": "Echo",
+  "link": "https://pokemon-echo.webflow.io/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cobni7.jpg",
+    "cover_horizontal": "https://resizer.ladbiblegroup.com/unsafe/rs:fit:1920:0:0:0/g:sm/q:70/aHR0cHM6Ly9ldS1pbWFnZXMuY29udGVudHN0YWNrLmNvbS92My9hc3NldHMvYmx0YmMxODc2MTUyZmNkOWYwNy9ibHQzZTVkMzAwYTFmOTU4YzI1LzY4YmU5YmUwMmRjNWRkNjlhYjAyYmQ0Ni9QT2tlbW9uX0VjaG8ucG5n.webp",
+    "background": "",
+    "logo": "https://cdn.prod.website-files.com/68be7a792a80ae468a67bc79/68be7fc862305b146a5d898d_logo.webp",
+    "icon": "",
+    "screenshots": []
+  }
+}

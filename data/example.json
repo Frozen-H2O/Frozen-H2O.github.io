@@ -7,8 +7,8 @@
     "label": "Short text summary of score"
   },
   "completion": {
-    "main": 1000000000,
-    "post_game": 1000000000,
+    "main": 0,
+    "post_game": 0,
     "dropped": false
   },
   "playtime_hours": 0,

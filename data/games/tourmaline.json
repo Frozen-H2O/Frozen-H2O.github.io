@@ -1,7 +1,7 @@
 {
-  "id": "",
-  "name": "",
-  "link": "",
+  "id": "tourmaline",
+  "name": "Tourmaline",
+  "link": "https://www.hackdex.app/hack/pokemon-tourmaline",
   "rating": {
     "score": 0,
     "label": ""
@@ -17,7 +17,7 @@
   "review": "",
   "images": {
     "cover_vertical": "",
-    "cover_horizontal": "",
+    "cover_horizontal": "https://images.hackdex.app/pokemon-tourmaline/1768937545249-0.png",
     "background": "",
     "logo": "",
     "icon": "",

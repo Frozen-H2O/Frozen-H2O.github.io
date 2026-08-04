@@ -1,0 +1,26 @@
+{
+  "id": "rowe",
+  "name": "R.O.W.E",
+  "link": "https://www.hackdex.app/hack/pokemon-rowe",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/f87fab68c0d99ec8ad67eb4c9733b472.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/6ae75d870427b6f8feb508528cb78046.png",
+    "background": "https://cdn2.steamgriddb.com/hero/8c4cf2f289e384ce286d6b0c5174d4c2.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/84a6413e1d78eb2e2f4466a5e5fd4e5e.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/70a33a4ec92e7540f955d6ba231b8b0b.png",
+    "screenshots": []
+  }
+}

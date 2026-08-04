@@ -1,0 +1,26 @@
+{
+  "id": "firered-rocket",
+  "name": "FireRed: Rocket Edition",
+  "link": "https://www.pokecommunity.com/threads/pok%C3%A9mon-firered-rocket-edition-completed.360725/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/c26f52d26dcd73631e36fcb48bde2a0f.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/29ea93a350aa0046a99024e7b090610b.png",
+    "background": "https://cdn2.steamgriddb.com/hero/6349c1b425669c49fcc1a492e2ffef95.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/d3dd22a54983c30e02c9c0cf04277689.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/9732e202ad7af4dd76eecd5f978cc96e.png",
+    "screenshots": []
+  }
+}

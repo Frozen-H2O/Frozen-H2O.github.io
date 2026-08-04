@@ -1,0 +1,26 @@
+{
+  "id": "pisces",
+  "name": "Pisces",
+  "link": "https://www.hackdex.app/hack/pokemon-pisces",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/a37806decaa297a1c9d1d3d4292eac3c.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/8bb8d77914e046e270f8e6e8e41d5433.jpg",
+    "background": "https://cdn2.steamgriddb.com/hero/a415b5cd5f95db2675804fe4cfc0cfe9.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/233014cfb590e15af863ec4513171135.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/921152c8c7ba0d160be0a1e9b562888a.png",
+    "screenshots": []
+  }
+}

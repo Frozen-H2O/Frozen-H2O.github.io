@@ -6,7 +6,6 @@ A personal website to list played Pokemon fan games as well as my ratings and re
 
 ## Adding a game
 
-Each game uses the same JSON format whether it is played or in the backlog. Specify its path in one of the following manifests:
-
-- `data/games.json` - games that have been played and open review modals when clicked.
-- `data/backlog.json` - unplayed games that open their `link` directly.
+Each game has its own JSON (copied from example.json or template.json) and is listed in `data/games.json`.
+Games with a `completion.main` Unix timestamp appear in Played and open review modals.
+Games without `completion.main` timestamp appear in Backlog and open their game's `link` directly.

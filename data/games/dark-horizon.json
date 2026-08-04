@@ -1,7 +1,7 @@
 {
-  "id": "",
-  "name": "",
-  "link": "",
+  "id": "dark-horizon",
+  "name": "Dark Horizon",
+  "link": "https://eeveeexpo.com/threads/9332/",
   "rating": {
     "score": 0,
     "label": ""
@@ -16,8 +16,8 @@
   "difficulty": "",
   "review": "",
   "images": {
-    "cover_vertical": "",
-    "cover_horizontal": "",
+    "cover_vertical": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coc5uv.jpg",
+    "cover_horizontal": "https://i.imgur.com/b7wHJ64.gif",
     "background": "",
     "logo": "",
     "icon": "",
