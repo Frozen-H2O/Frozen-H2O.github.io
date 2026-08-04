@@ -122,9 +122,14 @@ function render() {
     });
     grid.querySelectorAll('button.game-card').forEach(card => card.addEventListener('click', () => openGame(card.dataset.id)));
 
-    const totalHours = games.reduce((sum, game) => sum + Number(game.playtime_hours || 0), 0);
+    const totalHours = games.reduce((sum, game) => sum + Number(game.playtime_hours || 0), 0) + backlogGames.reduce((sum, game) => sum + Number(game.playtime_hours || 0), 0);
     const average = games.length ? (games.reduce((sum, game) => sum + Number(game.rating?.score || 0), 0) / games.length).toFixed(1) : '—';
-    document.querySelector('#stats').innerHTML = `<div class="stat"><strong>${games.length}</strong><span>games played</span></div><div class="stat"><strong>${totalHours.toFixed(1)}h</strong><span>total playtime</span></div><div class="stat"><strong>${average}</strong><span>average rating</span></div>`;
+    const gamesInProgress = backlogGames.reduce((sum, game) => sum + Number(game.playtime_hours > 0), 0);
+    document.querySelector('#stats').innerHTML =
+        `<div class="stat"><strong>${games.length}</strong><span>games played</span></div>
+        <div class="stat"><strong>${gamesInProgress}</strong><span>games in progress</span></div>
+        <div class="stat"><strong>${totalHours.toFixed(1)}h</strong><span>total playtime</span></div>
+        <div class="stat"><strong>${average}</strong><span>average rating</span></div>`;
 }
 
 function reviewHTML(review) {

@@ -82,11 +82,11 @@ h1 em {
 }
 .stats {
     display: flex;
-    gap: 30px;
 }
-.stat {
-    padding-left: 13px;
-    border-left: 2px solid var(--gold);
+.stat:not(:first-child) {
+    padding-left: 16px;
+    margin-left: 16px;
+    border-left: 2px solid var(--line);
 }
 .stat strong {
     display: block;
