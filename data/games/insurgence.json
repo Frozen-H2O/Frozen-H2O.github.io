@@ -1,0 +1,26 @@
+{
+  "id": "insurgence",
+  "name": "Insurgence",
+  "link": "",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/fcc5d81df98ad1c96837b7ad9d5289a8.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/21281b8378c63fa386a870db67d413f9.png",
+    "background": "https://cdn2.steamgriddb.com/hero/770a63e65de8dc31bd77724084ff433f.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/491159b91b3f6bfcebca81f03ebeee71.png",
+    "icon": "",
+    "screenshots": []
+  }
+}

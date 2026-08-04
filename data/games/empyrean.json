@@ -1,0 +1,26 @@
+{
+  "id": "empyrean",
+  "name": "Empyrean",
+  "link": "https://www.pokecommunity.com/showthread.php?t=411322",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/3d3e7735b7b7e2c906b87b5218eb866e.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/6830a3a377cff9f09bf5c2bb5cc01ff2.png",
+    "background": "",
+    "logo": "https://cdn2.steamgriddb.com/logo/e0501dd4a84df989ef1664ea7eb22adb.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/d8de81eff6dfe582a05bc6981879f01a.png",
+    "screenshots": []
+  }
+}

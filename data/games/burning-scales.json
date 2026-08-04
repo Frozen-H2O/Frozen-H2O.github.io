@@ -1,0 +1,26 @@
+{
+  "id": "burning-scales",
+  "name": "Burning Scales",
+  "link": "https://www.pokecommunity.com/threads/pok%C3%A9mon-burning-scales.538117/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://github.com/user-attachments/assets/85eed2e7-cbe2-49eb-9921-82ebaed22af7",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "acceptance",
+  "name": "Acceptance",
+  "link": "https://www.pokecommunity.com/threads/pokemon-acceptance.448789/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}

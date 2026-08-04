@@ -1,0 +1,26 @@
+{
+  "id": "africanvs",
+  "name": "Africanvs",
+  "link": "https://discord.gg/avnybAs",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/06367d140327e2c62b51f1629b2c2ef4.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/f6ec4ef6f8c39e559db584fd8daf9e18.png",
+    "background": "",
+    "logo": "https://cdn2.steamgriddb.com/logo/dd2434ce0548953b8a2de0c3535c69b0.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/5b3cba6b0094238aed7a3dd8e2ef7fd8.png",
+    "screenshots": []
+  }
+}

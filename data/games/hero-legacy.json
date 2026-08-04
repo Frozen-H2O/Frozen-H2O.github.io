@@ -1,0 +1,26 @@
+{
+  "id": "hero-legacy",
+  "name": "Hero Legacy",
+  "link": "https://www.pokecommunity.com/threads/pok%C3%A9mon-hero-legacy-eng-de-now-with-new-game-mode.538518/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://i.imgur.com/yeFRYmY.png",
+    "background": "",
+    "logo": "",
+    "icon": "",
+    "screenshots": []
+  }
+}

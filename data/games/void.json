@@ -1,0 +1,26 @@
+{
+  "id": "void",
+  "name": "Void",
+  "link": "https://www.pokecommunity.com/threads/pokemon-void.466707/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/35c9f68331bc680802441a73de9befaa.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/681a1b6dd38e8a12b2f9d64a1c0538d7.png",
+    "background": "https://cdn2.steamgriddb.com/hero/d3ecca1d7d241c1b1329f4b41a5ddcf9.png",
+    "logo": "https://cdn2.steamgriddb.com/logo/0637ef6ee575e664e512a87843cd6873.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/d9b20ead502c6a0592698a461ac06580.png",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "mega-adventure",
+  "name": "Mega Adventure",
+  "link": "https://www.pokecommunity.com/threads/pokemon-mega-adventure.362058/",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "http://i.imgur.com/IkvSM6S.png",
+    "background": "",
+    "logo": "http://i.imgur.com/C9GwryF.png",
+    "icon": "",
+    "screenshots": []
+  }
+}
