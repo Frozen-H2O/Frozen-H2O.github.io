@@ -318,6 +318,7 @@ select {
     background: #607b9c;
 }
 .dialog-hero > img {
+    aspect-ratio: 1920/620;
     width: 100%;
     height: 100%;
     object-fit: cover;

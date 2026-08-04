@@ -156,9 +156,9 @@ function openGame(id, { updateURL = true } = {}) {
     document.querySelector('#dialog-content').innerHTML = `
         ${game.link ? `<a href="${escapeHTML(game.link)}" target="_blank">` : ''}
             <div class="dialog-hero">
-                ${hero ? `<img src="${escapeHTML(hero)}" alt="Game background image" />` : ''}
+                ${hero ? `<img src="${escapeHTML(hero)}" alt="Pokémon ${escapeHTML(game.name)} background image" />` : ''}
                 <div class="dialog-title">
-                    ${game.images?.logo ? `<img src="${escapeHTML(game.images.logo)}" alt="Pokémon ${escapeHTML(game.name)}" />` : `<h2>Pokémon ${escapeHTML(game.name)}</h2>`}
+                    ${game.images?.logo ? `<img src="${escapeHTML(game.images.logo)}" alt="Pokémon ${escapeHTML(game.name)} logo" />` : `<h2>Pokémon ${escapeHTML(game.name)}</h2>`}
                 </div>
             </div>
         ${game.link ? '</a>' : ''}
