@@ -3,7 +3,7 @@
   "name": "Xenoverse",
   "link": "https://eeveeexpo.com/xenoverse/",
   "rating": {
-    "score": 0,
+    "score": 7,
     "label": ""
   },
   "completion": {
@@ -11,8 +11,8 @@
     "post_game": 1000000000,
     "dropped": false
   },
-  "playtime_hours": 0,
-  "realtime_hours": 0,
+  "playtime_hours": 9.5,
+  "realtime_hours": 9.5,
   "difficulty": "",
   "review": "",
   "images": {

@@ -1,0 +1,26 @@
+{
+  "id": "sage",
+  "name": "Sage",
+  "link": "https://discord.gg/JMg2ZZb",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 1000000000,
+    "post_game": 1000000000,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "https://cdn2.steamgriddb.com/grid/9c939d7f9a0478fe0def3959ef94fc6b.png",
+    "cover_horizontal": "https://cdn2.steamgriddb.com/grid/f1c6e2254fd25e7d83747b8edd7f0cb0.png",
+    "background": "",
+    "logo": "https://cdn2.steamgriddb.com/logo/e0fa25c30a366e8c79e770b3724f710e.png",
+    "icon": "https://cdn2.steamgriddb.com/icon/a81438d0412b464915b7a283c671b0cf.png",
+    "screenshots": []
+  }
+}
