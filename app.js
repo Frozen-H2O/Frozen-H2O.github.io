@@ -105,12 +105,34 @@ function cardTemplate(game, isBacklog = false) {
     return `<button class="game-card" data-id="${escapeHTML(game.id)}" aria-label="Open Pokémon ${escapeHTML(game.name)} review">${content}</button>`;
 }
 
+function applyCoverTreatment(image) {
+    if (!image.naturalWidth || !image.naturalHeight)
+        return;
+    const cardArt = image.closest('.card-art');
+    const imageRatio = image.naturalWidth / image.naturalHeight;
+    const cardRatio = 2 / 3;
+    if (imageRatio > cardRatio) {
+        cardArt.classList.add('has-wide-cover');
+        cardArt.style.setProperty('--cover-image', `url(${JSON.stringify(image.currentSrc || image.src)})`);
+    }
+}
+
+function prepareCoverTreatments(grid) {
+    grid.querySelectorAll('.card-art img').forEach(image => {
+        if (image.complete)
+            applyCoverTreatment(image);
+        else
+            image.addEventListener('load', () => applyCoverTreatment(image), { once: true });
+    });
+}
+
 function render() {
     const isBacklog = activeView === 'backlog';
     const list = isBacklog ? backlogGames : games;
     const ordered = isBacklog ? sortBacklogGames(list) : sortGames(list, document.querySelector('#sort').value);
     const grid = document.querySelector('#game-grid');
     grid.innerHTML = ordered.map(game => cardTemplate(game, isBacklog)).join('');
+    prepareCoverTreatments(grid);
     document.querySelector('#game-count').textContent = isBacklog ? `${list.length} game${list.length == 1 ? '' : 's'}` : '';
     document.querySelector('#sort-control').hidden = isBacklog;
     document.querySelector('#empty-state').hidden = list.length > 0;
