@@ -193,6 +193,7 @@ select {
     border-radius: inherit;
     transform: translateZ(0);
     isolation: isolate;
+    transition: transform 0.5s ease;
 }
 .card-art::before {
     content: '';
@@ -213,7 +214,6 @@ select {
     display: block;
     border-radius: inherit;
     clip-path: inset(0 round 13px);
-    transition: transform 0.5s ease;
 }
 .card-art.has-wide-cover::before {
     opacity: 1;
@@ -223,7 +223,7 @@ select {
     z-index: 1;
     object-fit: contain;
 }
-.game-card:hover .card-art img {
+.game-card:hover .card-art {
     transform: scale(1.05);
 }
 .art-shade {
