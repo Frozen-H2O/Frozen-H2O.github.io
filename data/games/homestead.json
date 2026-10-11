@@ -1,0 +1,26 @@
+{
+  "id": "homestead",
+  "name": "Homestead",
+  "link": "https://www.hackdex.app/hack/pokemon-homestead",
+  "rating": {
+    "score": 0,
+    "label": ""
+  },
+  "completion": {
+    "main": 0,
+    "post_game": 0,
+    "dropped": false
+  },
+  "playtime_hours": 0,
+  "realtime_hours": 0,
+  "difficulty": "",
+  "review": "",
+  "images": {
+    "cover_vertical": "",
+    "cover_horizontal": "https://images.hackdex.app/pokemon-homestead/1788784222108-0.png",
+    "background": "",
+    "logo": "",
+    "icon": "https://i.imgur.com/wuy44Tg.png",
+    "screenshots": []
+  }
+}
